@@ -1,25 +1,24 @@
-const buttons = document.getElementsByTagName("button")
+const buttons = document.querySelectorAll("button")
 const playerScore = document.getElementById("player-count")
 const computerScore = document.getElementById("computer-count")
-const playerChoice = document.getElementById("player-choice")
-const computerChoice = document.getElementById("computer-choice")
+const playerChoiceBox = document.getElementById("player-choice")
+const computerChoiceBox = document.getElementById("computer-choice")
 const messages = document.getElementById("game-info")
-const choices = ["rock", "paper", "scissors"];
+let playerChoice
 
-for (let button of buttons) {
-    button.addEventListener("click", function () {
-        let playerData = this.getAttribute("data-choice")
-    })
-}
+buttons.forEach(button => button.addEventListener('click', (e) => {
+    playerChoice = e.target.id
+    playerChoiceBox.innerText = playerChoice
+}))
 
-function startGame()
 
-function playerInput()
 
-function computerInput()
+// function playerInput()
 
-function gameInfo()
+// function computerInput()
 
-function incrementPlayerScore()
+// function gameInfo()
 
-function incrementComputerScore()
+// function incrementPlayerScore()
+
+// function incrementComputerScore()
