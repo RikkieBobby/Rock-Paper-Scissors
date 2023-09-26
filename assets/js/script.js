@@ -12,13 +12,14 @@ let computerMessage
 
 buttons.forEach(button => button.addEventListener('click', (e) => {
     playerChoice = e.target.id
-    playerChoiceBox.innerText = playerChoice
+    // playerChoiceBox.innerText = playerChoice
     playerInput()
     setTimeout(computerMessages, 2000)
     setTimeout(computerInput, 4000)
     setTimeout(generateResult, 6000)
     setTimeout(incrementRoundCounter, 6000)
-    setTimeout(clearChoices, 7000)
+    // setTimeout(clearChoices, 7000)
+    setTimeout(clearImages, 7000)
 }))
 
 
@@ -27,15 +28,15 @@ function playerInput() {
 
     if (playerChoice === "Rock") {
         playerMessage = `You chose ${playerChoice}`
-        // displayPlayerRock()
+        displayPlayerRock()
     }
     if (playerChoice === "Paper") {
         playerMessage = `You chose ${playerChoice}`
-        // displayPlayerPaper()
+        displayPlayerPaper()
     }
     if (playerChoice === "Scissors") {
         playerMessage = `You chose ${playerChoice}`
-        // displayPlayerScissors()
+        displayPlayerScissors()
     }
 
     messages.innerHTML = playerMessage
@@ -55,26 +56,27 @@ function computerInput() {
     if (randomNumber === 1) {
         computerChoice = "Rock"
         messages.innerHTML = `The Computer chose ${computerChoice}`
-        // displayComputerRock()
+        displayComputerRock()
     }
     if (randomNumber === 2) {
         computerChoice = "Paper"
         messages.innerHTML = `The Computer chose ${computerChoice}`
-        // displayComputerPaper()
+        displayComputerPaper()
     }
     if (randomNumber === 3) {
         computerChoice = "Scissors"
         messages.innerHTML = `The Computer chose ${computerChoice}`
-        // displayComputerScissors()
+        displayComputerScissors()
     }
 
-    computerChoiceBox.innerHTML = computerChoice
+    // computerChoiceBox.innerHTML = computerChoice
 
 }
 
 function generateResult() {
     if (computerChoice === playerChoice) {
         result = "It's a Draw"
+        incrementDrawCount()
     }
     if (computerChoice === "Rock" && playerChoice === "Paper") {
         result = "The Player Wins!"
@@ -116,38 +118,48 @@ function incrementComputerScore() {
     document.getElementById("computer-count").innerText = ++computerScore
 }
 
+function incrementDrawCount() {
+    drawCount = parseInt(document.getElementById("draw-count").innerText)
+    document.getElementById("draw-count").innerText = ++drawCount
+}
+
 function incrementRoundCounter() {
     roundCount = parseInt(document.getElementById("round-count").innerText)
     document.getElementById("round-count").innerText = ++roundCount
 }
 
-function clearChoices() {
-    playerChoiceBox.innerHTML = ""
-    computerChoiceBox.innerHTML = ""
+// function clearChoices() {
+//     playerChoiceBox.innerHTML = ""
+//     computerChoiceBox.innerHTML = ""
+// }
+
+function clearImages() {
+    document.getElementById("player-image").src = "assets/images/rps.jpg"
+    document.getElementById("computer-image").src = "assets/images/rps.jpg"
 }
 
-// function displayPlayerRock() {
-//     document.getElementById("player-image").src = "assets/images/rock.png"
-// }
+function displayPlayerRock() {
+    document.getElementById("player-image").src = "assets/images/rock.png"
+}
 
-// function displayPlayerPaper() {
-//     document.getElementById("player-image").src = "assets/images/paper.png"
-// }
+function displayPlayerPaper() {
+    document.getElementById("player-image").src = "assets/images/paper.png"
+}
 
-// function displayPlayerScissors() {
-//     document.getElementById("player-image").src = "assets/images/scissors.png"
-// }
+function displayPlayerScissors() {
+    document.getElementById("player-image").src = "assets/images/scissors.png"
+}
 
 
 
-// function displayComputerRock() {
-//     document.getElementById("computer-image").src = "assets/images/computer-rock.png"
-// }
+function displayComputerRock() {
+    document.getElementById("computer-image").src = "assets/images/computer-rock.png"
+}
 
-// function displayComputerPaper() {
-//     document.getElementById("Computer-image").src = "assets/images/computer-paper.png"
-// }
+function displayComputerPaper() {
+    document.getElementById("computer-image").src = "assets/images/computer-paper.png"
+}
 
-// function displayComputerScissors() {
-//     document.getElementById("Computer-image").src = "assets/images/computer-scissors.png"
-// }
+function displayComputerScissors() {
+    document.getElementById("computer-image").src = "assets/images/computer-scissors.png"
+}
