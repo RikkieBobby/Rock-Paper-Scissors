@@ -12,6 +12,7 @@ let computerMessage
 
 buttons.forEach(button => button.addEventListener('click', (e) => {
     playerChoice = e.target.id
+    disableButtons()
     // playerChoiceBox.innerText = playerChoice
     playerInput()
     setTimeout(computerMessages, 2000)
@@ -103,6 +104,8 @@ function generateResult() {
         incrementComputerScore()
     }
 
+    enableButtons()
+
     messages.innerHTML = result
 
 
@@ -150,6 +153,8 @@ function displayPlayerScissors() {
     document.getElementById("player-image").src = "assets/images/scissors.png"
 }
 
+
+
 function displayComputerRock() {
     document.getElementById("computer-image").src = "assets/images/computer-rock.png"
 }
@@ -162,10 +167,10 @@ function displayComputerScissors() {
     document.getElementById("computer-image").src = "assets/images/computer-scissors.png"
 }
 
-// function disableButtons {
-//     document.getElementsByClassName("btn").disabled = true
-// }
+function disableButtons() {
+    document.querySelectorAll("button.btn").forEach(button => button.disabled = true) 
+}
 
-// function enableButtons {
-//     document.getElementsByClassName("btn").disabled = false
-// }
+function enableButtons() {
+    document.querySelectorAll("button.btn").forEach(button => button.disabled = false) 
+}
