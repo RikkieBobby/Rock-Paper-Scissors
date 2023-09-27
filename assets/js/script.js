@@ -150,8 +150,6 @@ function displayPlayerScissors() {
     document.getElementById("player-image").src = "assets/images/scissors.png"
 }
 
-
-
 function displayComputerRock() {
     document.getElementById("computer-image").src = "assets/images/computer-rock.png"
 }
@@ -163,3 +161,11 @@ function displayComputerPaper() {
 function displayComputerScissors() {
     document.getElementById("computer-image").src = "assets/images/computer-scissors.png"
 }
+
+// function disableButtons {
+//     document.getElementsByClassName("btn").disabled = true
+// }
+
+// function enableButtons {
+//     document.getElementsByClassName("btn").disabled = false
+// }
