@@ -92,8 +92,7 @@ At the completion or heavy editing of sections, I used the following to check my
 
     ![JS Validator Results](assets/images/RPSjavavalid.png)
   + The validator did display these warnings, however these did not affect the code in any breaking way
-
-    ![Lighthouse Desktop Results](assets/images/RPSLighthouseDesktop.png)
+  
 ## Lighthouse Testing
 I used Chromes Lighthouse tools to test site performance. I check bothed desktop and mobile performances. Below are the screenshots from both tests:
 ### Lighthouse Desktop
