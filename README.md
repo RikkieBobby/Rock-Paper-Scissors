@@ -3,9 +3,9 @@ Rock-Paper-Scissors-JS is an interactive website where users can visit the webpa
 
 As I was stuggling with JavaScript up to this point, for this project I decided to take some insparation from Matt Rudge and make a RPS game with using some simple and easy to understand syntax. This allowed me understand further what was happening on the page.
 
-You can find the live site [here]().
+You can find the live site [here](https://rikkiebobby.github.io/Rock-Paper-Scissors/).
 
-![Rock-Papaer-Scissors-JS!]()
+![Rock-Papaer-Scissors-JS!](assets/images/RPSresponsive.png)
 # Contents
 + [User Experience](#user-experience)
   + [User Stories](#user-stories)
